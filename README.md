@@ -1,4 +1,4 @@
-# generator-eccube-2-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-eccube-2-plugin [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
 > generate a template of a plugin for ECCUBE2
 
 ## Installation
