@@ -30,7 +30,5 @@ MIT © [mikkame]()
 
 [npm-image]: https://badge.fury.io/js/generator-eccube-2-plugin.svg
 [npm-url]: https://npmjs.org/package/generator-eccube-2-plugin
-[travis-image]: https://travis-ci.org/tecpresso/generator-eccube-2-plugin.svg?branch=master
-[travis-url]: https://travis-ci.org/tecpresso/generator-eccube-2-plugin
 [daviddm-image]: https://david-dm.org/tecpresso/generator-eccube-2-plugin.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/tecpresso/generator-eccube-2-plugin
