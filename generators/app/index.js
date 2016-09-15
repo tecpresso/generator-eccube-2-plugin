@@ -4,6 +4,7 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 var camelCase = require('camelcase');
 var hookPoints = require('./hookPoints.json');
+console.log(hookPoints[0]);
 module.exports = yeoman.Base.extend({
   prompting: function () {
     this.log(yosay(
@@ -50,7 +51,12 @@ module.exports = yeoman.Base.extend({
       },{
         type: 'checkbox',
         name: "hookPoints",
-        message: "フックポイント",
+        message: "フックポイントの種類選択",
+        choices: hookPoints
+      },{
+        type: 'checkbox',
+        name: "hookPoints",
+        message: "フックポイントの種類選択",
         choices: hookPoints
       }
     ];
