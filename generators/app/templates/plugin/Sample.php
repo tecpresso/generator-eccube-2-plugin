@@ -1,6 +1,6 @@
 <?php
 
-<% for (hookPoint of hookPoints) { %>
+<% for (hookPoint of hookPointsmenu) { %>
 require_once 'plg_<%= class_name %><%= hookPoint.cammelcased %>.php';
 <% } %>
 
@@ -31,12 +31,12 @@ class <%= class_name %>
     }
 
     function register ($objHelperPlugin, $priority) {
-        <% for (hookPoint of hookPoints) { %>
+        <% for (hookPoint of hookPointsmenu) { %>
           $objHelperPlugin->addAction('<%= hookPoint.original %>', array($this, '<%= hookPoint.cammelcased %>'));
         <% } %>
     }
 
-    <% for (hookPoint of hookPoints) { %>
+    <% for (hookPoint of hookPointsmenu) { %>
     function <%= hookPoint.cammelcased %>($objPage)
     {
         $<%= hookPoint.cammelcased %> = new plg_<%= class_name %><%= hookPoint.cammelcased %>;
