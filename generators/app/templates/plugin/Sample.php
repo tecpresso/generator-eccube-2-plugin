@@ -1,10 +1,10 @@
 <?php
 
-<% for (hookPoint of hookPointsmenu) { %>
-require_once 'plg_<%= class_name %><%= hookPoint.cammelcased %>.php';
+<% for (hookPoint of hookPointChoices) { %>
+require_once 'plg_<%= props.class_name %><%= hookPoint.cammelcased %>.php';
 <% } %>
 
-class <%= class_name %>
+class <%= props.class_name %>
 {
     function install ($arrPlugin)
     {
@@ -31,15 +31,15 @@ class <%= class_name %>
     }
 
     function register ($objHelperPlugin, $priority) {
-        <% for (hookPoint of hookPointsmenu) { %>
+        <% for (hookPoint of hookPointChoices) { %>
           $objHelperPlugin->addAction('<%= hookPoint.original %>', array($this, '<%= hookPoint.cammelcased %>'));
         <% } %>
     }
 
-    <% for (hookPoint of hookPointsmenu) { %>
+    <% for (hookPoint of hookPointChoices) { %>
     function <%= hookPoint.cammelcased %>($objPage)
     {
-        $<%= hookPoint.cammelcased %> = new plg_<%= class_name %><%= hookPoint.cammelcased %>;
+        $<%= hookPoint.cammelcased %> = new plg_<%= props.class_name %><%= hookPoint.cammelcased %>;
         $<%= hookPoint.cammelcased %>->init($plg_head);
         $<%= hookPoint.cammelcased %>->process();
     }

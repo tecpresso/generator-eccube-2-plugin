@@ -8,7 +8,7 @@ class plugin_info {
     static $DESCRIPTION = '<%= description %>';
     static $CLASS_NAME = '<%= class_name %>';
     static $HOOK_POINTS = array(
-        <% for (hookPoint of hookPointsmenu) { %>
+        <% for (hookPoint of hookPointChoices) { %>
         array('<%= hookPoint.original %>', '<%= hookPoint.cammelcased %>'),
         <% } %>
     );
